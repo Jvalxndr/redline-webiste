@@ -1,54 +1,100 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Redline</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redline | Elegan & Modern</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
-      background-color: #121212;
-      color: #ffffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0b0b0b;
+      color: #f5f5f5;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      text-align: center;
       min-height: 100vh;
-      margin: 0;
-      padding: 20px;
+      justify-content: center;
+    }
+
+    .logo {
+      width: 180px;
+      height: auto;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 51, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
     }
 
     h1 {
+      font-size: 3em;
+      margin: 10px 0;
+      color: #ff0033;
+    }
+
+    p {
+      font-size: 1.1em;
       margin-bottom: 30px;
-      font-size: 2.5em;
-      letter-spacing: 1px;
+      color: #ccc;
     }
 
-    .button {
-      background-color: #1f1f1f;
-      color: white;
-      padding: 15px 25px;
-      margin: 10px;
-      border: 2px solid white;
-      border-radius: 8px;
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       text-decoration: none;
-      font-size: 1em;
-      width: 80%;
-      max-width: 400px;
-      text-align: center;
-      transition: all 0.3s ease;
+      background-color: #ff0033;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      width: 250px;
+      margin: 10px auto;
+      font-weight: 600;
+      transition: background 0.3s;
     }
 
-    .button:hover {
-      background-color: white;
-      color: #121212;
+    .links a:hover {
+      background-color: #cc0029;
+    }
+
+    .icon {
+      font-size: 1.2em;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2em;
+      }
+      .links a {
+        width: 80%;
+        font-size: 0.9em;
+      }
     }
   </style>
 </head>
 <body>
+  <img class="logo" src="1000008369.jpg" alt="Logo Redline">
   <h1>Redline</h1>
-  <a href="https://www.instagram.com/valclsths?igsh=MWg5bnUwMWduOG9qbw==" class="button" target="_blank">📷 Instagram</a>
-  <a href="https://wa.me/6282219053780" class="button" target="_blank">💬 WhatsApp</a>
-  <a href="https://tokopedia.com/redline" class="button" target="_blank">🛒 Tokopedia</a>
+  <p>Gaya hidup modern, untuk kamu yang dinamis.</p>
+  <div class="links">
+    <a href="https://www.instagram.com/valclsths?igsh=MWg5bnUwMWduOG9qbw==" target="_blank">
+      <i class="fab fa-instagram icon"></i> Instagram
+    </a>
+    <a href="https://wa.me/082219053780" target="_blank">
+      <i class="fab fa-whatsapp icon"></i> WhatsApp
+    </a>
+    <a href="https://tokopedia.com/redline" target="_blank">
+      <i class="fas fa-store icon"></i> Tokopedia
+    </a>
+  </div>
 </body>
 </html>
