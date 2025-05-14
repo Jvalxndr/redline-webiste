@@ -7,9 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Montserrat&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    body {
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #000000, #1f1f1f);
       background-size: 400% 400%;
@@ -21,7 +25,7 @@
       text-align: center;
       min-height: 100vh;
       justify-content: center;
-      overflow: hidden;
+      padding: 40px 20px;
     }
 
     @keyframes gradientShift {
@@ -31,12 +35,12 @@
     }
 
     .logo {
-      width: 320px;
+      width: 280px;
       max-width: 90%;
       margin-bottom: 25px;
-      filter: drop-shadow(0 0 20px #ff0033aa);
+      filter: drop-shadow(0 0 20px #ff0033cc);
+      animation: fadeInDown 1.2s ease-out forwards;
       opacity: 0;
-      animation: fadeIn 1.2s ease forwards;
     }
 
     h1 {
@@ -44,42 +48,42 @@
       font-size: 3em;
       margin: 10px 0;
       color: #ff0033;
-      text-shadow: 0 0 12px #ff0033aa;
-      opacity: 0;
+      text-shadow: 0 0 15px #ff0033aa;
       animation: fadeIn 1.6s ease forwards;
+      opacity: 0;
     }
 
     p {
       font-size: 1.2em;
       margin-bottom: 30px;
       color: #ccc;
-      opacity: 0;
       animation: fadeIn 2s ease forwards;
+      opacity: 0;
     }
 
     .links a {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
       text-decoration: none;
       background-color: #ff0033;
       color: white;
-      padding: 12px 20px;
+      padding: 14px 24px;
       border-radius: 30px;
-      width: 250px;
+      width: 260px;
       margin: 10px auto;
       font-weight: 600;
       transition: all 0.3s ease;
-      box-shadow: 0 0 10px #ff0033aa;
-      opacity: 0;
+      box-shadow: 0 4px 20px rgba(255, 0, 51, 0.4);
       animation: fadeIn 2.4s ease forwards;
+      opacity: 0;
     }
 
     .links a:hover {
-      background-color: #cc0029;
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 0 20px #ff0033dd;
+      background-color: #e6002f;
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 6px 25px rgba(255, 0, 51, 0.6);
     }
 
     .icon {
@@ -87,8 +91,17 @@
     }
 
     @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
       to {
         opacity: 1;
+        transform: translateY(0);
       }
     }
 
@@ -96,6 +109,7 @@
       h1 {
         font-size: 2.2em;
       }
+
       .links a {
         width: 80%;
         font-size: 0.95em;
@@ -104,7 +118,7 @@
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="Logo" style="width:200px; margin-bottom: 10px;">
+  <img src="logo.png" alt="Logo Redline" class="logo">
 
   <h1>Redline</h1>
   <p>Motorsports & Lifestyle</p>
@@ -122,9 +136,8 @@
       <i class="fas fa-store icon"></i> Shopee
     </a>
     <a href="https://tiktok.com/redline" target="_blank">
-      <i class="fas fa-store icon"></i> Tiktok
+      <i class="fab fa-tiktok icon"></i> TikTok
     </a>
-    
   </div>
 </body>
 </html>
