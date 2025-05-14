@@ -3,47 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redline | Elegan & Modern</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <title>Redline | Motorsport</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Montserrat&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Montserrat', sans-serif;
-      background-color: #0b0b0b;
-      color: #f5f5f5;
+      background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #000000, #1f1f1f);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       min-height: 100vh;
       justify-content: center;
+      overflow: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .logo {
-      width: 180px;
-      height: auto;
-      border-radius: 16px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 20px rgba(255, 0, 51, 0.5);
-      transition: transform 0.3s ease;
-    }
-
-    .logo:hover {
-      transform: scale(1.05);
+      width: 320px;
+      max-width: 90%;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 0 20px #ff0033aa);
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
     }
 
     h1 {
+      font-family: 'Orbitron', sans-serif;
       font-size: 3em;
       margin: 10px 0;
       color: #ff0033;
+      text-shadow: 0 0 12px #ff0033aa;
+      opacity: 0;
+      animation: fadeIn 1.6s ease forwards;
     }
 
     p {
-      font-size: 1.1em;
+      font-size: 1.2em;
       margin-bottom: 30px;
       color: #ccc;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
     }
 
     .links a {
@@ -59,32 +70,43 @@
       width: 250px;
       margin: 10px auto;
       font-weight: 600;
-      transition: background 0.3s;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #ff0033aa;
+      opacity: 0;
+      animation: fadeIn 2.4s ease forwards;
     }
 
     .links a:hover {
       background-color: #cc0029;
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 0 20px #ff0033dd;
     }
 
     .icon {
       font-size: 1.2em;
     }
 
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
     @media (max-width: 500px) {
       h1 {
-        font-size: 2em;
+        font-size: 2.2em;
       }
       .links a {
         width: 80%;
-        font-size: 0.9em;
+        font-size: 0.95em;
       }
     }
   </style>
 </head>
 <body>
-  <img class="logo" src="1000008369.jpg" alt="Logo Redline">
+  <img class="logo" src="1000008303.png" alt="Redline Motorsports Logo">
   <h1>Redline</h1>
-  <p>Gaya hidup modern, untuk kamu yang dinamis.</p>
+  <p>Motorsports & Lifestyle</p>
   <div class="links">
     <a href="https://www.instagram.com/valclsths?igsh=MWg5bnUwMWduOG9qbw==" target="_blank">
       <i class="fab fa-instagram icon"></i> Instagram
